@@ -4,7 +4,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 @Component({
   selector: 'app-create-user',
   templateUrl: './create-user.component.html',
-  styleUrls: ['./create-user.component.css']
+  styleUrls: ['./create-user.component.scss']
 })
 export class CreateUserComponent implements OnInit {
 
@@ -20,7 +20,9 @@ export class CreateUserComponent implements OnInit {
       lastname: ['', [Validators.required, Validators.maxLength(40)]],
       address: ['', [Validators.required, Validators.maxLength(250)]],
       phone: ['', [Validators.required, Validators.maxLength(12)]],
-      email: ['', [Validators.maxLength(40), Validators.email, Validators.required]]
+      email: ['', [Validators.maxLength(40), Validators.email, Validators.required]],
+      password: ['', [Validators.maxLength(60), Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/), 
+                      Validators.required, Validators.minLength(8)]]
     });
   }
 
