@@ -11,6 +11,9 @@ import { SharedModule } from './shared/shared.module';
 import { HomeComponent } from './home/home.component';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserListComponent } from './user-list/user-list.component';
+import { MatTableModule } from '@angular/material/table';
+import { UserCreatedComponent } from './user-created/user-created.component';
+
 
 @NgModule({
   declarations: [
@@ -18,17 +21,19 @@ import { UserListComponent } from './user-list/user-list.component';
     HomeComponent,
     CreateUserComponent,
     UserListComponent,
+    UserCreatedComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    RouterModule.forRoot([
-    ]),
     SharedModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    NgxMaskModule.forRoot(null)
+    MatTableModule,
+    NgxMaskModule.forRoot(null),
+    RouterModule.forRoot([
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
