@@ -1,7 +1,8 @@
+using Boundaries.Persistance;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -26,6 +27,11 @@ namespace UnitTestingCrud
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+            services.AddDbContext<DbContextCrud>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("dbConnection"),
+            (op) => op.MigrationsAssembly("Boundaries.Persistence")));
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

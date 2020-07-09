@@ -1252,6 +1252,19 @@
         "runtime": {
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
+      },
+      "Core/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "3.1.5"
+        },
+        "compile": {
+          "bin/placeholder/Core.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Core.dll": {}
+        }
       }
     }
   },
@@ -4880,10 +4893,17 @@
         "system.xml.xmlserializer.4.3.0.nupkg.sha512",
         "system.xml.xmlserializer.nuspec"
       ]
+    },
+    "Core/1.0.0": {
+      "type": "project",
+      "path": "../Core/Core.csproj",
+      "msbuildProject": "../Core/Core.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v3.1": [
+      "Core >= 1.0.0",
+      "Microsoft.EntityFrameworkCore >= 3.1.5",
       "Microsoft.EntityFrameworkCore.SqlServer >= 3.1.5"
     ]
   },
@@ -4894,11 +4914,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Core\\Core.csproj",
-      "projectName": "Core",
-      "projectPath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Core\\Core.csproj",
+      "projectUniqueName": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Boundaries.Persistance\\Boundaries.Persistance.csproj",
+      "projectName": "Boundaries.Persistance",
+      "projectPath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Boundaries.Persistance\\Boundaries.Persistance.csproj",
       "packagesPath": "C:\\Users\\Stealth msi\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Core\\obj\\",
+      "outputPath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Boundaries.Persistance\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -4916,7 +4936,11 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Core\\Core.csproj": {
+              "projectPath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Core\\Core.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -4928,6 +4952,10 @@
     "frameworks": {
       "netcoreapp3.1": {
         "dependencies": {
+          "Microsoft.EntityFrameworkCore": {
+            "target": "Package",
+            "version": "[3.1.5, )"
+          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[3.1.5, )"

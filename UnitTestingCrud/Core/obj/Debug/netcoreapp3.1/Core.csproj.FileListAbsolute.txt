@@ -4,6 +4,5 @@ C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.csprojAssemblyReference.cache
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfoInputs.cache
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.AssemblyInfo.cs
-C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.csproj.CoreCompileInputs.cache
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.dll
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Core\obj\Debug\netcoreapp3.1\Core.pdb

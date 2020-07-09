@@ -5,6 +5,8 @@
     /// </summary>
     public sealed class User
     {
+        public string ID { get; set; }
+
         /// <summary>
         /// User name.
         /// </summary>
