@@ -11,5 +11,5 @@ C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\obj\Debug\netcoreapp3.1\Boundaries.Persistance.csproj.CopyComplete
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\bin\Debug\netcoreapp3.1\Boundaries.Persistance.runtimeconfig.json
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\bin\Debug\netcoreapp3.1\Boundaries.Persistance.runtimeconfig.dev.json
-C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\obj\Debug\netcoreapp3.1\Boundaries.Persistance.csproj.CoreCompileInputs.cache
 C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\obj\Debug\netcoreapp3.1\Boundaries.Persistance.genruntimeconfig.cache
+C:\Users\Stealth msi\Desktop\Debt PayOff\Unit Testing Lvl 2\Repo\UnitTestingCrud\Boundaries.Persistance\obj\Debug\netcoreapp3.1\Boundaries.Persistance.csproj.CoreCompileInputs.cache

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "PWYfrr11VT4qnqfKSQIAxEcy/3yw7RyM1RsCXd4XMCRkbfB7HfqTxg/gEiEQS0gX5ILkB4sYovI1XQuM4nDeTA==",
+  "dgSpecHash": "HLiOMvF/AzUiFjwlqM0xvxgteuOjv+5lyru8ucwgAWM9bmCZN55LuGC6Np5SNzbvN/9IZM1WyT7+erFQDL0IHg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Stealth msi\\Desktop\\Debt PayOff\\Unit Testing Lvl 2\\Repo\\UnitTestingCrud\\Boundaries.Persistance\\Boundaries.Persistance.csproj",
   "expectedPackageFiles": [
@@ -12,8 +12,10 @@
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.5\\microsoft.entityframeworkcore.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.5\\microsoft.entityframeworkcore.abstractions.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.5\\microsoft.entityframeworkcore.analyzers.3.1.5.nupkg.sha512",
+    "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.5\\microsoft.entityframeworkcore.design.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.5\\microsoft.entityframeworkcore.relational.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.1.5\\microsoft.entityframeworkcore.sqlserver.3.1.5.nupkg.sha512",
+    "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\3.1.5\\microsoft.entityframeworkcore.tools.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\3.1.5\\microsoft.extensions.caching.abstractions.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.extensions.caching.memory\\3.1.5\\microsoft.extensions.caching.memory.3.1.5.nupkg.sha512",
     "C:\\Users\\Stealth msi\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.5\\microsoft.extensions.configuration.3.1.5.nupkg.sha512",

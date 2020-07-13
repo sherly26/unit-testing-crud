@@ -30,7 +30,7 @@ namespace UnitTestingCrud
 
             services.AddDbContext<DbContextCrud>(options =>
             options.UseSqlServer(Configuration.GetConnectionString("dbConnection"),
-            (op) => op.MigrationsAssembly("Boundaries.Persistence")));
+            (op) => op.MigrationsAssembly("Boundaries.Persistance")));
 
         }
 
