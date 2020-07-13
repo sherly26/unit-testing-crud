@@ -82,5 +82,24 @@ namespace Core.Managers
                 return BasicOperationResult<string>.Fail("Ocurrió un error actualizando al usuario.", ex.ToString());
             }
         }
+
+        public async Task<IOperationResult<string>> DeleteUser(User user)
+        {
+            try
+            {
+                IOperationResult<User> userFound = await SearchUser(user);
+                User userToDelete = userFound.Entity;
+
+                _usersRepository.Remove(userToDelete);
+
+                await _usersRepository.SaveAsync();
+
+                return BasicOperationResult<string>.Ok("Usuario eliminado correctamente.");
+            }
+            catch (Exception ex)
+            {
+                return BasicOperationResult<string>.Fail("Ocurrió un error eliminando el usuario.", ex.ToString());
+            }
+        }
     }
 }
