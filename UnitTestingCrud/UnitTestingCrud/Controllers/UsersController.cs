@@ -76,7 +76,7 @@ namespace UnitTestingCrud.Controllers
             return Ok();
         }
 
-        [HttpDelete]
+        [HttpDelete("{username}")]
         public async Task<IActionResult> DeleteUser (string username)
         {
             IOperationResult<string> deletedUserResult = await _usersManager.DeleteUser(username);
