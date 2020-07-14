@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { UsersService } from '../services/users.service';
+import { User } from '../models/user';
+import { ToastNotificationService } from '../services/toast-notification.service';
 
 @Component({
   selector: 'app-create-user',
@@ -12,7 +15,9 @@ export class CreateUserComponent implements OnInit {
   signIn: FormGroup;
   constructor(
     private formBuilder: FormBuilder,
-    private router: Router
+    private router: Router,
+    private userService: UsersService,
+    private toastNotificationService: ToastNotificationService
   ) { }
 
   ngOnInit() {
@@ -28,8 +33,28 @@ export class CreateUserComponent implements OnInit {
     });
   }
 
-  createUser() {
-    this.router.navigate(['/created-user']);
+  async createUser() {
+    try {
+      const userToCreate = await this.buildUser();
+      this.userService.createUser(userToCreate);
+      this.router.navigate(['/created-user']);
+    } catch (error) {
+      this.toastNotificationService.showError('Ha ocurrido un error inesperado', error);
+    }
+  }
+
+  buildUser(): User {
+    const createUserRequest: User = {
+      username: this.signIn.get('username').value,
+      name: this.signIn.get('name').value,
+      lastname: this.signIn.get('lastname').value,
+      email: this.signIn.get('email').value,
+      password: this.signIn.get('password').value,
+      phone: this.signIn.get('phone').value,
+      address: this.signIn.get('address').value
+    };
+
+    return createUserRequest;
   }
 
 }

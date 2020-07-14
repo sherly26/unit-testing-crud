@@ -107,7 +107,7 @@
             </form>
             <div class="row justify-content-center mr-0">
                 <div class="col-12 p-0 align-items-center">
-                    <button mat-button (click)="createUser()"
+                    <button mat-button (click)="createUser()" [class.disabled]="!this.signIn.valid" [disabled]="!this.signIn.valid"
                         class="btn-primary col-12 col-md-12 col-lg-12 btn-align btn-sizing btn-borders">Registrar</button>
                 </div>
             </div>

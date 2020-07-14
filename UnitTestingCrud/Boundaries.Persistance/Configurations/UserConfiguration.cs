@@ -8,13 +8,13 @@ namespace Boundaries.Persistance.Configurations
     {
         void IEntityTypeConfiguration<User>.Configure(EntityTypeBuilder<User> builder)
         {
-            builder.Property(user => user.ID);
-            builder.Property(user => user.Name).HasMaxLength(70);
-            builder.Property(user => user.Lastname).HasMaxLength(70);
-            builder.Property(user => user.Username).HasMaxLength(70);
+            builder.HasKey(user => user.ID);
+            builder.Property(user => user.Name).IsRequired().HasMaxLength(70);
+            builder.Property(user => user.Lastname).IsRequired().HasMaxLength(70);
+            builder.Property(user => user.Username).IsRequired().HasMaxLength(70);
             builder.Property(user => user.Email).IsRequired().HasMaxLength(50);
-            builder.Property(user => user.Password);
-            builder.Property(user => user.Phone).HasMaxLength(20);
+            builder.Property(user => user.Password).IsRequired();
+            builder.Property(user => user.Phone).IsRequired().HasMaxLength(20);
             builder.Property(user => user.Address).IsRequired().HasMaxLength(300);
         }
     }

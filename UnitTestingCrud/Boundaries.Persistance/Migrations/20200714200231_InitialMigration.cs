@@ -10,7 +10,7 @@ namespace Boundaries.Persistance.Migrations
                 name: "Users",
                 columns: table => new
                 {
-                    ID = table.Column<string>(nullable: false),
+                    ID = table.Column<int>(nullable: false),
                     Name = table.Column<string>(nullable: true),
                     Lastname = table.Column<string>(nullable: true),
                     Username = table.Column<string>(nullable: true),

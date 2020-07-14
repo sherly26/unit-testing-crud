@@ -4,6 +4,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { NgxMaskModule, IConfig } from 'ngx-mask';
+import { ToastrModule } from 'ngx-toastr';
 
 import { AppRoutingModule } from '../app/app-routing.module';
 import { AppComponent } from './app.component';
@@ -13,7 +14,6 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { UserCreatedComponent } from './user-created/user-created.component';
-import { UsersServiceComponent } from './services/users-service/users-service.component';
 
 
 @NgModule({
@@ -23,7 +23,6 @@ import { UsersServiceComponent } from './services/users-service/users-service.co
     CreateUserComponent,
     UserListComponent,
     UserCreatedComponent,
-    UsersServiceComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
@@ -33,6 +32,7 @@ import { UsersServiceComponent } from './services/users-service/users-service.co
     AppRoutingModule,
     ReactiveFormsModule,
     MatTableModule,
+    ToastrModule.forRoot(),
     NgxMaskModule.forRoot(null),
     RouterModule.forRoot([
     ])

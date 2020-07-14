@@ -5,7 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="EntityFramework" Version="6.4.4" />
+    <Compile Remove="Migrations\20200714155758_SecondMigration.cs" />
+    <Compile Remove="Migrations\20200714155758_SecondMigration.Designer.cs" />
+    <Compile Remove="Migrations\20200714194611_AddRequiredToFieldsAndAddedPK.cs" />
+    <Compile Remove="Migrations\20200714194611_AddRequiredToFieldsAndAddedPK.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.SpaServices" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.5">

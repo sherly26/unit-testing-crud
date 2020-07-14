@@ -1,7 +1,9 @@
 using Boundaries.Persistance;
+using Boundaries.Persistance.Repositories;
+using Core.Contracts;
+using Core.Managers;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,10 +34,23 @@ namespace UnitTestingCrud
             options.UseSqlServer(Configuration.GetConnectionString("dbConnection"),
             (op) => op.MigrationsAssembly("Boundaries.Persistance")));
 
+            InitializeRepositories(services);
+
+            InitializeManagers(services);
         }
 
-        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        private void InitializeRepositories(IServiceCollection services)
+        {
+            services.AddScoped<IUsersRepository, UsersRepository>();
+        }
+
+        private static void InitializeManagers(IServiceCollection services)
+        {
+            services.AddScoped<UsersManager, UsersManager>();
+        }
+
+            // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+            public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
             if (env.IsDevelopment())
             {
@@ -73,7 +88,7 @@ namespace UnitTestingCrud
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                    spa.UseProxyToSpaDevelopmentServer("http://localhost:4200");
                 }
             });
         }
