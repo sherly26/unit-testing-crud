@@ -1,6 +1,7 @@
 ﻿using Core.Contracts;
 using Core.Models;
 using System;
+using System.Collections.Generic;
 using System.Threading.Tasks;
 
 namespace Core.Managers
@@ -58,6 +59,20 @@ namespace Core.Managers
             }
         }
 
+        public IOperationResult<IEnumerable<User>> GetUsers()
+        {
+            try
+            {
+                IEnumerable<User> users = _usersRepository.GetUsers();
+
+                return BasicOperationResult<IEnumerable<User>>.Ok(users);
+            }
+            catch (Exception ex)
+            {
+                return BasicOperationResult<IEnumerable<User>>.Fail("Ocurrió un error buscando al usuario.", ex.ToString());
+            }
+        }
+
         public async Task<IOperationResult<string>> UpdateUser(User user)
         {
             try
@@ -83,12 +98,11 @@ namespace Core.Managers
             }
         }
 
-        public async Task<IOperationResult<string>> DeleteUser(User user)
+        public async Task<IOperationResult<string>> DeleteUser(string username)
         {
             try
             {
-                IOperationResult<User> userFound = await SearchUser(user);
-                User userToDelete = userFound.Entity;
+                User userToDelete = await _usersRepository.FindAsync(user => user.Username == username);
 
                 _usersRepository.Remove(userToDelete);
 

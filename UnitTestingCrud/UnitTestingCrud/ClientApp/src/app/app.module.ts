@@ -13,6 +13,7 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { UserCreatedComponent } from './user-created/user-created.component';
+import { UsersServiceComponent } from './services/users-service/users-service.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { UserCreatedComponent } from './user-created/user-created.component';
     CreateUserComponent,
     UserListComponent,
     UserCreatedComponent,
+    UsersServiceComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
