@@ -9,6 +9,8 @@
     <Compile Remove="Migrations\20200714155758_SecondMigration.Designer.cs" />
     <Compile Remove="Migrations\20200714194611_AddRequiredToFieldsAndAddedPK.cs" />
     <Compile Remove="Migrations\20200714194611_AddRequiredToFieldsAndAddedPK.Designer.cs" />
+    <Compile Remove="Migrations\20200715143229_AddedUserIdAutoincrement.cs" />
+    <Compile Remove="Migrations\20200715143229_AddedUserIdAutoincrement.Designer.cs" />
   </ItemGroup>
 
   <ItemGroup>

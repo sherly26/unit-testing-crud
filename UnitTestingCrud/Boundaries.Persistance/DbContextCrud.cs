@@ -23,5 +23,19 @@ namespace Boundaries.Persistance
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
             => base.OnConfiguring(optionsBuilder);
 
+
+        ///  <inheritdoc/>
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.HasSequence<int>("User_seq", schema: "dbo")
+                .StartsAt(0)
+                .IncrementsBy(1);
+
+            modelBuilder.Entity<User>()
+                .Property(o => o.ID)
+                .HasDefaultValueSql("NEXT VALUE FOR dbo.User_seq");
+        }
     }
+
 }
+

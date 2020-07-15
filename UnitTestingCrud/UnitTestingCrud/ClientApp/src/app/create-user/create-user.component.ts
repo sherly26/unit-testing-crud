@@ -36,7 +36,7 @@ export class CreateUserComponent implements OnInit {
   async createUser() {
     try {
       const userToCreate = await this.buildUser();
-      this.userService.createUser(userToCreate);
+      await this.userService.createUser(userToCreate);
       this.router.navigate(['/created-user']);
     } catch (error) {
       this.toastNotificationService.showError('Ha ocurrido un error inesperado', error);
