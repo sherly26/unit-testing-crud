@@ -47,7 +47,7 @@ namespace UnitTestingCrud.Controllers
                 return BadRequest(userFoundResult.Message);
             }
 
-            return Ok();
+            return Ok(userFoundResult.Entity);
         }
 
         [HttpGet("users")]
@@ -60,7 +60,7 @@ namespace UnitTestingCrud.Controllers
                 return BadRequest(userFoundResult.Message);
             }
 
-            return Ok();
+            return Ok(userFoundResult.Entity);
         }
 
         [HttpPatch]

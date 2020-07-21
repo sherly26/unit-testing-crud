@@ -22,7 +22,7 @@ export class UsersService {
   }
 
   getUsers() {
-    return this.httpClient.get(`api/users/users`).toPromise();
+    return this.httpClient.get<Array<User>>(`api/users/users`).toPromise();
   }
 
   deleteUser(username: string) {
