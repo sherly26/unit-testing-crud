@@ -3,8 +3,17 @@
     <div class="card" style="width: 40rem;">
         <div class="card-body">
             <div class="card-title text-center">
-                <h3> Registro de Usuario</h3>
+                <ng-container *ngIf="!userToUpdate; then viewNewUserScreen; else viewUpdateUserScreen">
+                </ng-container>
             </div>
+            <ng-template #viewNewUserScreen>
+                <h3>Registro de Usuario</h3>
+            </ng-template>
+
+            <ng-template #viewUpdateUserScreen>
+                <h3>Registro de Usuario</h3>
+            </ng-template>
+
             <form class="row justify-content-center mr-0" (keydown.enter)="$event.preventDefault()"
                 [formGroup]="signIn">
 
@@ -107,7 +116,8 @@
             </form>
             <div class="row justify-content-center mr-0">
                 <div class="col-12 p-0 align-items-center">
-                    <button mat-button (click)="createUser()" [class.disabled]="!this.signIn.valid" [disabled]="!this.signIn.valid"
+                    <button mat-button (click)="createUser()" [class.disabled]="!this.signIn.valid"
+                        [disabled]="!this.signIn.valid"
                         class="btn-primary col-12 col-md-12 col-lg-12 btn-align btn-sizing btn-borders">Registrar</button>
                 </div>
             </div>

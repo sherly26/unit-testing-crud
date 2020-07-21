@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UsersService } from '../services/users.service';
@@ -12,6 +12,7 @@ import { ToastNotificationService } from '../services/toast-notification.service
 })
 export class CreateUserComponent implements OnInit {
 
+  @Input() userToUpdate;
   signIn: FormGroup;
   constructor(
     private formBuilder: FormBuilder,

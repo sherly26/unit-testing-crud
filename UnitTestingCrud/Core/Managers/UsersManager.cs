@@ -20,12 +20,12 @@ namespace Core.Managers
             {
                 _usersRepository.Create(new User
                 {
-                    Name = user.Name,
-                    Lastname = user.Lastname,
+                    Name = user.Name.ToUpper(),
+                    Lastname = user.Lastname.ToUpper(),
                     Username = user.Username.ToUpper(),
-                    Email = user.Email,
+                    Email = user.Email.ToLower(),
                     Password = user.Password,
-                    Address = user.Address,
+                    Address = user.Address.ToUpper(),
                     Phone = user.Phone
                 });
 

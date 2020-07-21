@@ -15,6 +15,7 @@ import { UserListComponent } from './user-list/user-list.component';
 import { MatTableModule } from '@angular/material/table';
 import { UserCreatedComponent } from './user-created/user-created.component';
 import { LoginComponent } from './login/login.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -34,6 +35,7 @@ import { LoginComponent } from './login/login.component';
     AppRoutingModule,
     ReactiveFormsModule,
     MatTableModule,
+    BrowserAnimationsModule,
     ToastrModule.forRoot(),
     NgxMaskModule.forRoot(null),
     RouterModule.forRoot([
