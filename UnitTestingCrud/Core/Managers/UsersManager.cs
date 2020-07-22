@@ -39,17 +39,15 @@ namespace Core.Managers
             }
         }
 
-        public async Task<IOperationResult<User>> SearchUser(User user)
+        public async Task<IOperationResult<User>> SearchUser(string username)
         {
             try
             {
-                bool usernameExist = await _usersRepository.ExistsAsync(username => username.Username == user.Username);
-                if (!usernameExist)
+                User userFound = await _usersRepository.FindAsync(dbUser => dbUser.Username == username);
+                if (userFound is null)
                 {
                     return BasicOperationResult<User>.Fail("No se encontró el usuario.");
                 }
-
-                User userFound = await _usersRepository.FindAsync(dbUser => dbUser.Username == user.Username);
 
                 return BasicOperationResult<User>.Ok(userFound);
             }
@@ -77,7 +75,7 @@ namespace Core.Managers
         {
             try
             {
-                IOperationResult<User> userFound = await SearchUser(user);
+                IOperationResult<User> userFound = await SearchUser(user.Username);
                 User userToUpdate = userFound.Entity;
 
                 userToUpdate.Name = user.Name;

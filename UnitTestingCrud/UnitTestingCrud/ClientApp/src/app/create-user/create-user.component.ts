@@ -12,7 +12,6 @@ import { ToastNotificationService } from '../services/toast-notification.service
 })
 export class CreateUserComponent implements OnInit {
 
-  @Input() userToUpdate;
   signIn: FormGroup;
   constructor(
     private formBuilder: FormBuilder,

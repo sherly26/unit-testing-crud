@@ -7,6 +7,8 @@ import { User } from '../models/user';
 })
 export class UsersService {
 
+  username: string;
+
   constructor(private httpClient: HttpClient) { }
 
   createUser(userModel: User) {
@@ -14,7 +16,7 @@ export class UsersService {
   }
 
   search(username) {
-    return this.httpClient.get(`api/users/${username}`).toPromise();
+    return this.httpClient.get<User>(`api/users/${username}`).toPromise();
   }
 
   updateUser(userToUpdateModel: User) {

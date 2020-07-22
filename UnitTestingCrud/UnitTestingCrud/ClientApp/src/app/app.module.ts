@@ -16,6 +16,7 @@ import { MatTableModule } from '@angular/material/table';
 import { UserCreatedComponent } from './user-created/user-created.component';
 import { LoginComponent } from './login/login.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { UpdateUserComponent } from './user-list/update-user/update-user.component';
 
 
 @NgModule({
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     UserListComponent,
     UserCreatedComponent,
     LoginComponent,
+    UpdateUserComponent,
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),

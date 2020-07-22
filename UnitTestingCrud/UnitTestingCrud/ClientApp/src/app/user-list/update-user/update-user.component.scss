@@ -1,0 +1,33 @@
+.btn-align {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.btn-sizing {
+    height: 50%;
+    width: 79%;
+}
+
+.btn-borders {
+    border-radius: 5px;
+}
+
+.card {
+    margin-top: 2rem;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 1px 1px 3px grey;
+    border-radius: 10px;
+}
+
+.body-style {
+    background-color: #fcfcfc;
+    height: 100vh;
+}
+
+.disabled {
+    opacity: 0.5;
+}

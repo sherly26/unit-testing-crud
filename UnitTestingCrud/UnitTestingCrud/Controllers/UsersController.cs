@@ -38,7 +38,7 @@ namespace UnitTestingCrud.Controllers
         }
 
         [HttpGet("{username}")]
-        public async Task<IActionResult> SearchUser (User username)
+        public async Task<IActionResult> SearchUser (string username)
         {
             IOperationResult<User> userFoundResult = await _usersManager.SearchUser(username);
 

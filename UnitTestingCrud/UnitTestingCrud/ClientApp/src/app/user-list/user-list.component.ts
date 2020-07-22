@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { User } from '../models/user';
 import { UsersService } from '../services/users.service';
 import { ToastNotificationService } from '../services/toast-notification.service';
-import { CreateUserComponent } from '../create-user/create-user.component';
 import { Router } from '@angular/router';
 
 @Component({
@@ -14,7 +13,6 @@ export class UserListComponent implements OnInit {
 
   displayedColumns = ['user', 'name', 'lastname', 'email', 'phone', 'address'];
   userListArray: User[];
-  updateScreen: CreateUserComponent;
 
   constructor(
     private userService: UsersService,
@@ -43,10 +41,10 @@ export class UserListComponent implements OnInit {
     }
   }
 
-  goToUpdateUserScreen(user: User) {
+  goToUpdateUserScreen(username: string) {
     try {
-      this.updateScreen.userToUpdate = user;
-      this.router.navigate(['/create-user']);
+      this.userService.username = username;
+      this.router.navigate(['/update-user']);
     } catch (error) {
       this.toastNotificationService.showError('Ha ocurrido un error actualizando el usuario.', error);
     }
