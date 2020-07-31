@@ -13,8 +13,11 @@
 <div class="row">
   <div class="col-12 justify-content-center">
     <div mat-dialog-actions>
-      <button mat-raised-button class="button btn-primary" (click)="onNoClick()">No</button>
-      <button mat-raised-button class="button btn-danger" [mat-dialog-close]="true" cdkFocusInitial>Sí</button>
+      <button mat-raised-button class="btn btn-cancel text-white" (click)="onNoClick()">Cancelar
+        <i class="fa fa-close text-white"></i>
+      </button>
+      <button mat-raised-button class="btn btn-confirm text-color" [mat-dialog-close]="true" cdkFocusInitial>Eliminar
+        <i class="fa fa-trash text-color"></i></button>
     </div>
   </div>
 </div>

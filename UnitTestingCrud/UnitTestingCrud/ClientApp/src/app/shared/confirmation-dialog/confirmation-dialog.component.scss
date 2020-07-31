@@ -11,6 +11,18 @@
     background-color: #343a40 !important;
 }
 
-.button {
+.btn {
     flex-grow: 1;
+}
+
+.btn-confirm {
+    background-color: #c5e3ff;
+}
+
+.btn-cancel {
+    background-color: #3a9efd;
+}
+
+.text-color {
+    color: #3a9efd;
 }
