@@ -1,0 +1,16 @@
+.fa-lg {
+    padding: 2rem;
+    font-size: 5rem;
+}
+
+.mat-dialog-actions {
+    justify-content: center;
+}
+
+::ng-deep.mat-dialog-container {
+    background-color: #343a40 !important;
+}
+
+.button {
+    flex-grow: 1;
+}

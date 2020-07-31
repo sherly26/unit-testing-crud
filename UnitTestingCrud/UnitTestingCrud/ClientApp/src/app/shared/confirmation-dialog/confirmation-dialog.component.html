@@ -1,0 +1,20 @@
+<div mat-dialog-content>
+  <div class="row">
+    <div class="col-12 fa-lg text-center">
+      <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <h3>{{data.message}}</h3>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <div class="col-12 justify-content-center">
+    <div mat-dialog-actions>
+      <button mat-raised-button class="button btn-primary" (click)="onNoClick()">No</button>
+      <button mat-raised-button class="button btn-danger" [mat-dialog-close]="true" cdkFocusInitial>Sí</button>
+    </div>
+  </div>
+</div>

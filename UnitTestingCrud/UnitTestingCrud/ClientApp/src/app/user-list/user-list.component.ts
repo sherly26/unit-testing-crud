@@ -3,6 +3,8 @@ import { User } from '../models/user';
 import { UsersService } from '../services/users.service';
 import { ToastNotificationService } from '../services/toast-notification.service';
 import { Router } from '@angular/router';
+import { ConfirmationDialogComponent } from '../shared/confirmation-dialog/confirmation-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-user-list',
@@ -15,9 +17,10 @@ export class UserListComponent implements OnInit {
   userListArray: User[];
 
   constructor(
+    public modal: MatDialog,
     private userService: UsersService,
     private toastNotificationService: ToastNotificationService,
-    private router: Router
+    private router: Router,
   ) { }
 
   ngOnInit(): void {
@@ -40,6 +43,22 @@ export class UserListComponent implements OnInit {
       this.toastNotificationService.showError('Ha ocurrido un error eliminando al usuario.', error);
     }
   }
+
+  openDialog(username: string): void {
+    const dialogRef = this.modal.open(ConfirmationDialogComponent, {
+      width: '400px',
+      height: '300px',
+      data: {
+        message: `¿Está seguro que desea eliminar a ${username}?`
+      }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        this.deleteUser(username);
+      }
+    });
+  }
+
 
   goToUpdateUserScreen(username: string) {
     try {
